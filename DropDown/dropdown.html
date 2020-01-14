@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        iframe {
+            width: 100%;
+            overflow: visible;
+            height: 100vh;
+            border: none;
+        }
+
+        .dropdown {
+            float: right;
+        }
+   </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Change Language
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a onclick=" navigatorChange1()" href="#">English</a></li>
+            <li><a onclick=" navigatorChange2()" href="#">عربی</a></li>
+            <li><a onclick=" navigatorChange3()" href="#">اردو</a></li>
+        </ul>
+    </div>
+    <div id='data'>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDF6jb43bsPajI3VuXYt_ypyZ60EpFtgJQlnVIPrMrDeBM4A/viewform?embedded=true">Loading…</iframe>
+    </div>
+
+    <script language="Javascript">
+        var navigator = 'english';
+        function navigatorChange1() {
+            document.getElementById("data").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeDF6jb43bsPajI3VuXYt_ypyZ60EpFtgJQlnVIPrMrDeBM4A/viewform?embedded=true\">Loading…</iframe>";
+        }
+        function navigatorChange2() {
+            document.getElementById("data").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSfRQlqyn8WPjRzCKjk0Kzu7CpRuwTrwbTqHgFkVcK8cjz0SEw/viewform?embedded=true\">Loading…</iframe>";
+        }
+        function navigatorChange3() {
+            document.getElementById("data").innerHTML = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSfHHZ1mnsfV3H34bamSf9zToRfGJBJpzjyQBV66HwTuSAVIcA/viewform?embedded=true\">Loading…</iframe>";
+
+        }
+    </script>
+</body>
+
+</html>
